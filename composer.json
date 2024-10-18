@@ -1,0 +1,17 @@
+{
+    "name": "saithink/laravelorm-log",
+    "description": "基于webman开发的LaravelOrm日志记录插件",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Saithink\\LaravelOrmLog\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "saithink",
+            "email": "1430792918@qq.com"
+        }
+    ]
+}
