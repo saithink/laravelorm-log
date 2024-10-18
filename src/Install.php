@@ -1,5 +1,5 @@
 <?php
-namespace Saithink\ThinkOrmLog;
+namespace Saithink\LaravelOrmLog;
 
 class Install
 {
@@ -9,7 +9,7 @@ class Install
      * @var array
      */
     protected static $pathRelation = [
-        'config/plugin/saithink/thinkorm-log' => 'config/plugin/saithink/thinkorm-log',
+        'config/plugin/saithink/laravelorm-log' => 'config/plugin/saithink/laravelorm-log',
     ];
 
     /**
