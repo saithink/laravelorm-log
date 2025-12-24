@@ -42,7 +42,15 @@ class BootstrapLog implements Bootstrap
             $log = $sql." [{$time}ms]";
             // 打印到控制台
             if ($config['console']) {
-                echo "[".date("Y-m-d H:i:s")."]"."\033[32m".$log."\033[0m".PHP_EOL;
+                echo PHP_EOL ."\033[35m" . "EloquentORM: " . date("Y-m-d H:i:s") . "\033[0m";
+                echo PHP_EOL . "[SQL]" . "\033[32m" .$sql . "\033[0m";
+                if ($time < 50) {
+                    echo PHP_EOL . "[Time]" . "\033[32m" . $time . "ms" . "\033[0m";
+                } else if ($time < 200) {
+                    echo PHP_EOL . "[Time]" ."\033[33m" . $time . "ms" . "\033[0m";
+                } else  {
+                    echo PHP_EOL . "[Time]" . "\033[31m" . $time . "ms" . "\033[0m";
+                }
             }
             // 记录到日志文件
             if ($config['file']) {
