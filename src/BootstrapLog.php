@@ -24,7 +24,7 @@ class BootstrapLog implements Bootstrap
         Db::listen(function($query) use ($config) {
             $sql = $query->sql;
             $time = $query->time;
-            if ($sql === 'select 1') {
+            if ($sql === 'SELECT 1 AS ping' || $sql === 'SELECT 1 AS ping FROM DUAL') {
                 // 心跳
                 return;
             }
